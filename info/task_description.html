@@ -23,7 +23,7 @@ Here is some demonstration of the 'liberties' concept.
 
 <p>
 In this mission your task is to count how many stones were 'eaten' by each player.
-The input will be two-dimensional array, where the empty intersections will be '+', the black stones - 'B' and the white stones - 'W' (black & white are traditional colors for this game). You should return the answer in the dictionary format, like this: {'Black': n, 'White': m}, where n and m - the amount of stones 'eated' by each players.
+The input will be two-dimensional array, where the empty intersections will be '+', the black stones - 'B' and the white stones - 'W' (black & white are traditional colors for this game). You should return the answer in the dictionary format, like this: {'B': n, 'W': m}, where n and m - the amount of stones 'eated' by each players.
 </p>
 
 <p style="text-align: center;">
@@ -54,7 +54,7 @@ The input will be two-dimensional array, where the empty intersections will be '
          ['+','W','+','B','W','B','W','B','+'],
          ['+','+','+','+','B','W','B','+','+'],
          ['+','B','+','+','B','W','B','+','+'],
-         ['+','+','+','+','+','B','+','+','+']]) == {'Black': 4, 'White': 3}
+         ['+','+','+','+','+','B','+','+','+']]) == {'B': 4, 'W': 3}
 </pre>
 {% else %}
 <pre class="brush: python">go_game([['+','+','+','+','W','+','+','+','+'],
@@ -65,7 +65,7 @@ The input will be two-dimensional array, where the empty intersections will be '
          ['+','W','+','B','W','B','W','B','+'],
          ['+','+','+','+','B','W','B','+','+'],
          ['+','B','+','+','B','W','B','+','+'],
-         ['+','+','+','+','+','B','+','+','+']]) == {'Black': 4, 'White': 3}
+         ['+','+','+','+','+','B','+','+','+']]) == {'B': 4, 'W': 3}
 </pre>
 {% endif %}
 </div>
