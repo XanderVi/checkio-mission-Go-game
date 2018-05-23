@@ -22,8 +22,8 @@ Here is some demonstration of the 'liberties' concept.
 </p>
 
 <p>
-In this mission your task is to count how many stones were 'eaten' by each player.
-The input will be two-dimensional array, where the empty intersections will be '+', the black stones - 'B' and the white stones - 'W' (black & white are traditional colors for this game). You should return the answer in the dictionary format, like this: {'B': n, 'W': m}, where n and m - the amount of stones 'eated' by each players.
+In this mission your task is to count how many stones of each color were 'eaten'.
+The input will be two-dimensional array - the list of the strings, where the empty intersections will be '+', the black stones - 'B' and the white stones - 'W' (black & white are traditional colors for this game). You should return the answer in the dictionary format, like this: {'B': n, 'W': m}, where n and m - the amount of black and white stones which were 'eated'. For example, if there were eaten 4 black stones, and only 3 white, the answer will be: {'B': 4, 'W': 3}.
 </p>
 
 <p style="text-align: center;">
@@ -32,11 +32,11 @@ The input will be two-dimensional array, where the empty intersections will be '
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two-dimensional array.
+    <strong>Input: </strong> Two-dimensional array (the list of the strings).
 </p>
 
 <p>
-    <strong>Output: </strong> Dictionary with the amount of the 'eaten' stones.
+    <strong>Output: </strong> Dictionary with the amount of the 'eaten' stones of each color.
 </p>
 
 
@@ -46,26 +46,26 @@ The input will be two-dimensional array, where the empty intersections will be '
 <strong>Example:</strong>
 </p>
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">goGame([['+','+','+','+','W','+','+','+','+'],
-         ['+','+','+','W','B','W','+','+','+'],
-         ['+','+','B','W','B','B','W','+','+'],
-         ['+','W','+','+','W','W','B','+','+'],
-         ['+','W','+','+','B','+','B','+','+'],
-         ['+','W','+','B','W','B','W','B','+'],
-         ['+','+','+','+','B','W','B','+','+'],
-         ['+','B','+','+','B','W','B','+','+'],
-         ['+','+','+','+','+','B','+','+','+']]) == {'B': 4, 'W': 3}
+<pre class="brush: javascript">goGame(['++++W++++',
+         '+++WBW+++',
+         '++BWBBW++',
+         '+W++WWB++',
+         '+W++B+B++',
+         '+W+BWBWB+',
+         '++++BWB++',
+         '+B++BWB++',
+         '+++++B+++']) == {'B': 3, 'W': 4}
 </pre>
 {% else %}
-<pre class="brush: python">go_game([['+','+','+','+','W','+','+','+','+'],
-         ['+','+','+','W','B','W','+','+','+'],
-         ['+','+','B','W','B','B','W','+','+'],
-         ['+','W','+','+','W','W','B','+','+'],
-         ['+','W','+','+','B','+','B','+','+'],
-         ['+','W','+','B','W','B','W','B','+'],
-         ['+','+','+','+','B','W','B','+','+'],
-         ['+','B','+','+','B','W','B','+','+'],
-         ['+','+','+','+','+','B','+','+','+']]) == {'B': 4, 'W': 3}
+<pre class="brush: python">go_game(['++++W++++',
+         '+++WBW+++',
+         '++BWBBW++',
+         '+W++WWB++',
+         '+W++B+B++',
+         '+W+BWBWB+',
+         '++++BWB++',
+         '+B++BWB++',
+         '+++++B+++']) == {'B': 3, 'W': 4}
 </pre>
 {% endif %}
 </div>
@@ -80,5 +80,5 @@ The input will be two-dimensional array, where the empty intersections will be '
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p><strong>Precondition</strong>:<br>
-    Board - 9х9
+    Board - 9х9, 7x7, 5x5
 </p>
